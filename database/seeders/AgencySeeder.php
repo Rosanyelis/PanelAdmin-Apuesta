@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Agency;
 use Illuminate\Database\Seeder;
 
 class AgencySeeder extends Seeder
@@ -13,6 +14,8 @@ class AgencySeeder extends Seeder
      */
     public function run()
     {
-        //
+        Agency::create([
+            'name' => 'Agencia Demo', 
+        ]);
     }
 }

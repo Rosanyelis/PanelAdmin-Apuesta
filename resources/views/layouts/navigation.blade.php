@@ -1,117 +1,85 @@
-<!-- BEGIN: Main Menu-->
-<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
-    <div class="navbar-header">
-        <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mr-auto">
-                <a class="navbar-brand" href="{{ url('dashboard') }}">
-                    <img src="{{ asset('img/logo-star-2.png') }}" width="85%" alt="Star Sport logo">
-                </a>
-            </li>
-
-        </ul>
-    </div>
-    <div class="shadow-bottom"></div>
-    <div class="main-menu-content mt-2">
-        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item">
-                <a class="d-flex align-items-center" href="{{ url('dashboard') }}">
-                    <i data-feather="home"></i>
-                    <span class="menu-title text-truncate" data-i18n="Dashboards">Dashboard</span>
-                </a>
-            </li>
-            <li class="navigation-header">
-                <span data-i18n="Módulos">Módulos</span>
-                <i data-feather="more-horizontal"></i>
-            </li>
-            <li class="nav-item">
-                <a class="d-flex align-items-center" href="{{ url('encuentros') }}">
-                    <i data-feather='users'></i>
-                    <span class="menu-title text-truncate " data-i18n="Encuentros">Encuentros</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="d-flex align-items-center" href="{{ url('apuestas') }}">
-                    <i data-feather='users'></i>
-                    <span class="menu-title text-truncate " data-i18n="Apuestas">Apuestas</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="d-flex align-items-center" href="{{ url('usuarios') }}">
-                    <i data-feather='users'></i>
-                    <span class="menu-title text-truncate " data-i18n="Users">Usuarios</span>
-                </a>
-            </li>
-            <li class=" nav-item">
-                <a class="d-flex align-items-center" href="javascript:void(0);">
-                    <i data-feather='settings'></i>
-                    <span class="menu-title text-truncate" data-i18n="settings">Reportes</span>
-                </a>
-                <ul class="menu-content">
-                    <li>
-                        <a class="d-flex align-items-center" href="javascript:void(0);">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Ingresos">Ingresos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="javascript:void(0);">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Saldos">Saldos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="javascript:void(0);">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Bancos">Reporte Contable</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="javascript:void(0);">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Monedas">Caja de Operación</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="javascript:void(0);">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Monedas">Pagos y Recargas</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item">
-                <a class="d-flex align-items-center" href="javascript:void(0);">
-                    <i data-feather='settings'></i>
-                    <span class="menu-title text-truncate" data-i18n="settings">Configuración</span>
-                </a>
-                <ul class="menu-content">
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ url('roles') }}">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Roles">Roles</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ url('agencias') }}">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Agencias">Agencias</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ url('bancos') }}">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Bancos">Bancos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="d-flex align-items-center" href="{{ url('monedas') }}">
-                            <i data-feather="circle"></i>
-                            <span class="menu-item text-truncate" data-i18n="Monedas">Monedas</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+<div class="horizontal-menu-wrapper">
+    <div class="header-navbar navbar-expand-sm navbar navbar-horizontal floating-nav navbar-light navbar-shadow menu-border" role="navigation" data-menu="menu-wrapper" data-menu-type="floating-nav">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="{{ url('dashboard') }}">
+                        <img src="{{ asset('img/logo-star-2.png') }}" width="85%" alt="Star Sport logo">
+                    </a>
+                </li>
+                <li class="nav-item nav-toggle">
+                    <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
+                        <i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <!-- Horizontal menu content-->
+        <div class="navbar-container main-menu-content" data-menu="menu-container">
+            <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="dropdown nav-item" data-menu="dropdown">
+                    <a class="nav-link d-flex align-items-center" href="{{ url('dashboard') }}">
+                        <i data-feather="home"></i>
+                        <span data-i18n="Dashboards">Dashboard</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-item" data-menu="dropdown">
+                    <a class="nav-link d-flex align-items-center" href="{{ url('encuentros') }}">
+                        <i data-feather="users"></i>
+                        <span data-i18n="Encuentros">Encuentros</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-item" data-menu="dropdown">
+                    <a class="nav-link d-flex align-items-center" href="{{ url('apuestas') }}">
+                        <i data-feather="users"></i>
+                        <span data-i18n="Apuestas">Apuestas</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-item" data-menu="dropdown">
+                    <a class="nav-link d-flex align-items-center" href="{{ url('arbol-de-sistema') }}">
+                        <i data-feather="users"></i>
+                        <span data-i18n="Apuestas">Arbol de Sistema</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-item" data-menu="dropdown">
+                    <a class="nav-link d-flex align-items-center" href="{{ url('usuarios') }}">
+                        <i data-feather="users"></i>
+                        <span data-i18n="Users">Usuarios</span>
+                    </a>
+                </li>
+                <li class="dropdown nav-item" data-menu="dropdown">
+                    <a class="dropdown-toggle nav-link d-flex align-items-center" href="#" data-toggle="dropdown">
+                        <i data-feather="package"></i>
+                        <span data-i18n="Apps">Configuraciones</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu="">
+                            <a class="dropdown-item d-flex align-items-center" href="{{ url('roles') }}" data-toggle="dropdown" data-i18n="Roles">
+                                <i data-feather="circle"></i>
+                                <span data-i18n="Email">Roles</span>
+                            </a>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item d-flex align-items-center" href="{{ url('agencias') }}" data-toggle="dropdown" data-i18n="Roles">
+                                <i data-feather="circle"></i>
+                                <span data-i18n="Email">Agencias</span>
+                            </a>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item d-flex align-items-center" href="{{ url('bancos') }}" data-toggle="dropdown" data-i18n="Roles">
+                                <i data-feather="circle"></i>
+                                <span data-i18n="Email">Bancos</span>
+                            </a>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item d-flex align-items-center" href="{{ url('monedas') }}" data-toggle="dropdown" data-i18n="Roles">
+                                <i data-feather="circle"></i>
+                                <span data-i18n="Email">Monedas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
-<!-- END: Main Menu-->

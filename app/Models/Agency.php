@@ -22,10 +22,11 @@ class Agency extends Model
     ];
 
     /**
-     * Obtiene a los usuarios asociado al rol.
+     * Obtiene a los usuarios que pertenecen a una agencia
      */
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->hasMany(User::class);
     }
+    
 }

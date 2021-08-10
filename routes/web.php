@@ -8,6 +8,7 @@ use App\Http\Controllers\BankController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\BetController;
 use App\Http\Controllers\MeetingController;
+use App\Http\Controllers\SystemTreeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+# Arbol de Sistema
+Route::get('/arbol-de-sistema', [SystemTreeController::class, 'index']);
 
 # Apuestas
 Route::get('/apuestas', [BetController::class, 'index']);
