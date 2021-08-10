@@ -19,7 +19,7 @@ $(function () {
       3: { title: 'Inactive', class: 'badge-light-secondary' }
     };
 
-  var assetPath = '../../../app-assets/',
+  var assetPath = 'http://127.0.0.1:8000/app-assets/',
     userView = 'app-user-view.html',
     userEdit = 'app-user-edit.html';
   if ($('body').attr('data-framework') === 'laravel') {

@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ApiCountryController;
+use App\Http\Controllers\Api\ApiCurrencyController;
+use App\Http\Controllers\Api\WebAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::post('register', [WebAuthController::class, 'register']);
+Route::post('login', [WebAuthController::class, 'login']);
+
+Route::get('monedas', [ApiCurrencyController::class, 'index']);
+Route::get('paises', [ApiCountryController::class, 'index']);
