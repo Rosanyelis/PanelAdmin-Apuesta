@@ -17,9 +17,9 @@ use App\Http\Controllers\Api\WebAuthController;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::post('logout', [WebAuthController::class, 'logout']);
+});
 
 Route::post('register', [WebAuthController::class, 'register']);
 Route::post('login', [WebAuthController::class, 'login']);
